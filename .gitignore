@@ -1,0 +1,4 @@
+dev/.terraform/
+modules/.terraform/
+preprod/.terraform/
+prod/.terraform/
