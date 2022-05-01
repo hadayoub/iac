@@ -136,6 +136,18 @@ resource "aws_ebs_volume" "my_ebs_volume" {
     Name = "ebs volume"
   }
 }
+output "SNAPSHOT" {
+  value = aws_ebs_snapshot.example_snapshot
+}
+
+#SNAPSHOT EBS VOLUME
+resource "aws_ebs_snapshot" "example_snapshot" {
+  volume_id = aws_ebs_volume.my_ebs_volume.id
+
+  tags = {
+    Name = "ebs snapshot"
+  }
+}
 
 #EBS VOLUME ATTACHEMENT
 resource "aws_volume_attachment" "my_ebs_volume_att" {
