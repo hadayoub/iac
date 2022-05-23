@@ -15,7 +15,7 @@ variable "environment" {
 }
 #vpc tags
 variable "vpc_tags" {
-  type = map(string) 
+  type = map(string)
   default = {
     Name = "dev_vpc"
   }
@@ -23,7 +23,7 @@ variable "vpc_tags" {
 }
 #subnet tag
 variable "subnet_tags" {
-  type = map(string) 
+  type = map(string)
   default = {
     Name = "dev_subnet"
   }
@@ -42,12 +42,12 @@ variable "ec2_tags" {
 #instance type 
 variable "instance_type" {
   type        = string
-  default = "t3.micro"
+  default     = "t3.micro"
   description = "this is the instance type"
 }
 #ami
 variable "ami" {
   type        = string
-  default = "ami-063a9ea2ff5685f7f"
+  default     = "ami-063a9ea2ff5685f7f"
   description = "this is the ami"
 }

@@ -15,10 +15,11 @@ module "aws_subnet" {
   subnet_tags       = var.subnet_tags
 }
 module "aws_instance" {
-  source            = "../modules"
-  ami           = var.ami
-  instance_type = var.instance_type
+  source         = "../modules"
+  ami            = var.ami
+  instance_type  = var.instance_type
   vpc_cidr_block = var.vpc_cidr_block
-  ec2_tags = var.ec2_tags
+  ec2_tags       = var.ec2_tags
 }
+
  
